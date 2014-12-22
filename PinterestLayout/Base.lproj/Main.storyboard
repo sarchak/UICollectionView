@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gMK-U2-LWB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Pinterest-->
+        <scene sceneID="li2-Ao-L5l">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <collectionViewController id="fPi-3g-62L" customClass="LayoutController" customModule="PinterestLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qTt-HR-CcU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2DX-Ub-6Nr">
+                            <size key="itemSize" width="199" height="315"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collCell" id="EPa-OH-FeR" customClass="CollectionViewCell" customModule="PinterestLayout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="199" height="315"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uio-DU-qnS">
+                                            <rect key="frame" x="0.0" y="8" width="201" height="264"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="uio-DU-qnS" secondAttribute="height" multiplier="183:241" id="vOR-UU-N0u"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7p-KY-nPd">
+                                            <rect key="frame" x="8" y="279" width="183" height="28"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.47604776072315769" green="0.43302370480253333" blue="0.48086144179894175" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="N7p-KY-nPd" firstAttribute="trailing" secondItem="EPa-OH-FeR" secondAttribute="trailingMargin" id="0kX-Mq-UVS"/>
+                                    <constraint firstItem="N7p-KY-nPd" firstAttribute="top" secondItem="uio-DU-qnS" secondAttribute="bottom" constant="8" id="BwL-ey-zHJ"/>
+                                    <constraint firstItem="N7p-KY-nPd" firstAttribute="bottom" secondItem="EPa-OH-FeR" secondAttribute="bottomMargin" id="JYM-PF-BC9"/>
+                                    <constraint firstItem="N7p-KY-nPd" firstAttribute="top" secondItem="uio-DU-qnS" secondAttribute="bottom" constant="7" id="OmG-LY-4G4"/>
+                                    <constraint firstItem="uio-DU-qnS" firstAttribute="leading" secondItem="EPa-OH-FeR" secondAttribute="leadingMargin" constant="-8" id="ZP2-GX-WwU"/>
+                                    <constraint firstItem="uio-DU-qnS" firstAttribute="top" secondItem="EPa-OH-FeR" secondAttribute="topMargin" id="oKh-Ri-aw5"/>
+                                    <constraint firstItem="N7p-KY-nPd" firstAttribute="leading" secondItem="EPa-OH-FeR" secondAttribute="leadingMargin" id="pMl-iW-jDs"/>
+                                    <constraint firstItem="uio-DU-qnS" firstAttribute="trailing" secondItem="EPa-OH-FeR" secondAttribute="trailingMargin" constant="9.5" id="tqS-eR-BPz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="pinImage" destination="uio-DU-qnS" id="qiL-vU-cgs"/>
+                                    <outlet property="title" destination="N7p-KY-nPd" id="Q0M-XV-GR8"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fPi-3g-62L" id="7Kb-mh-nzQ"/>
+                            <outlet property="delegate" destination="fPi-3g-62L" id="bhG-46-IMY"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Pinterest" id="B8D-u8-dNF"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYX-0I-Dcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="872" y="253"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xpf-4R-hpY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gMK-U2-LWB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TYm-mY-QPV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fPi-3g-62L" kind="relationship" relationship="rootViewController" id="8ab-A1-zN0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tia-AN-Aqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin1.jpg" width="435" height="640"/>
+    </resources>
 </document>

@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        let navBar = UINavigationBar.appearance()
+//        navBar.barTintColor = UIColor.redColor()
+//        navBar.tintColor = UIColor.redColor()
+        let font = UIFont(name: "Zapfino", size: 20.0)
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.redColor(), NSFontAttributeName: font! ]
         return true
     }
 
