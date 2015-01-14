@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2DX-Ub-6Nr">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="2DX-Ub-6Nr">
                             <size key="itemSize" width="199" height="315"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -57,6 +57,7 @@
                                 <connections>
                                     <outlet property="pinImage" destination="uio-DU-qnS" id="qiL-vU-cgs"/>
                                     <outlet property="title" destination="N7p-KY-nPd" id="Q0M-XV-GR8"/>
+                                    <segue destination="Ozw-BD-w4F" kind="show" identifier="detail" id="TUz-kD-6Ph"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -70,6 +71,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYX-0I-Dcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872" y="253"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="ThE-0S-8FH">
+            <objects>
+                <viewController id="Ozw-BD-w4F" customClass="DetailViewController" customModule="PinterestLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hDp-BP-qnA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xbp-wX-cPs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpp-QK-A1N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilz-my-ahl">
+                                <rect key="frame" x="50" y="69" width="534" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chh-vG-cqi">
+                                <rect key="frame" x="200" y="182" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="4xO-pa-5gk"/>
+                                    <constraint firstAttribute="width" constant="200" id="8r7-Ph-6Wr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="chh-vG-cqi" secondAttribute="centerY" id="SkA-W1-QSm"/>
+                            <constraint firstAttribute="centerX" secondItem="chh-vG-cqi" secondAttribute="centerX" id="sNZ-tE-Gth"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="chh-vG-cqi" id="ras-tO-SBM"/>
+                        <outlet property="myLabel" destination="Ilz-my-ahl" id="axJ-wI-cuD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocb-UD-ACZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="253"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xpf-4R-hpY">

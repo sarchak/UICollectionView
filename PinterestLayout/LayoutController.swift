@@ -64,6 +64,25 @@ class LayoutController: UICollectionViewController, UICollectionViewDelegateFlow
             return sectionInsets
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println(segue.identifier)
+        println(sender)
+        if(segue.identifier == "detail"){
+            let cell = sender as CollectionViewCell
+            let indexPath = collectionView?.indexPathForCell(cell)
+            let vc = segue.destinationViewController as DetailViewController
+
+            let curr = indexPath!.row % 5  + 1
+            let imgName = "pin\(curr).jpg"
+            
+            println(vc)
+            vc.currImage = UIImage(named: imgName)
+            vc.textHeading = self.titles[indexPath!.row % 5]
+//            
+//            vc.heading.text = self.titles[0]
+//            vc.imageView.image = UIImage(named: imgName)
+        }
+    }
 
     
 
